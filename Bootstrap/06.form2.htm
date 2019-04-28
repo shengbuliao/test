@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+      input::placeholder {
+        color: lightblue!important;
+      }
+    </style>
+    <script>
+      $(function() {
+        $("input[type='email']").focus();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">WBS1901101</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Gender</label>
+              <div class="col-sm-10">
+                  <label class="radio-inline">
+                    <input type="radio" name="ugender" value="M" /> Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ugender" value="F" checked /> Female
+                  </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Course</label>
+              <div class="col-sm-3">
+                  <select class="form-control">
+                    <option>Java</option>
+                    <option selected>Web</option>
+                    <option>Android</option>
+                    <option>Oracle</option>
+                  </select>
+                <!-- <div class="dropdown">
+                  <button style="width: 100px;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                    <span id="content">Java</span>
+                    <input type="hidden" name="course" value="1" />
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" cid="1">Java</a></li>
+                    <li><a href="#" cid="2">WEB</a></li>
+                    <li><a href="#" cid="3">Android</a></li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Favs</label>
+              <div class="col-sm-10">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" name="ufavs" value="R" /> Read
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" name="ufavs" value="W" checked /> Write
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" name="ufavs" value="S" /> Swim
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" name="ufavs" value="M" checked /> Music
+                  </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile" class="col-sm-2 control-label">Image</label>
+              <div class="col-sm-10">
+                <input type="file" id="exampleInputFile" style="padding-top: 7px;" />
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="desc" class="col-sm-2 control-label">Desc</label>
+                <div class="col-sm-10">
+                  <textarea id="desc" class="form-control" style="resize: none; height: 150px;"></textarea>
+                </div>
+              </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

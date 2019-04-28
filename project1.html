@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="./Bootstrap/Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="./Bootstrap/Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./Bootstrap/Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .reouter{
+            /* border: 1px solid red; */
+            height: 600px;
+            margin-top: 100px;
+        }
+        .logo{
+            /* border: 1px solid red; */
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .bottom,.bottom2,.bottom3,.bottom4{
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            /* height: 300px; */
+        }
+        .bottom3{
+            text-align: center;
+            padding-top: 50px;
+        }
+        .formbody{
+            padding: 20px;
+            
+        }
+        .text,.text2,.text4{
+            text-align: right;
+            margin: 10px;
+        }
+        .text3{
+            font-size: 12px;
+        }
+
+    </style>
+    <script>
+        // $(function(){
+        //     $(".text a:first").click(function(){
+        //         console.log(111);
+        //     })
+        // })
+    </script>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 reouter">
+                        <div class="container-fluid">
+                                <div class="row">
+                                        <div class="col-xs-4 col-xs-offset-4 logo">
+                                            <img src="image/logo.png" alt="logo">
+                                        </div>
+                                </div>
+                                <div class="row" role="tabpanel">
+                                        <ul class="nav nav-tabs nav-justified role="tablist"">
+                                            <li role="presentation" class="active" role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">登陆</a></li>
+                                            <li role="presentation" role="presentation"><a href="#regist" aria-controls="regist" role="tab" data-toggle="tab">注册</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                        <div class="bottom tab-pane active" role="tabpanel" id="login">
+                                                <form class="formbody">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="username" placeholder="用户">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" id="password" placeholder="密码">
+                                                    </div>
+                                                    <div class="text">
+                                                            <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+                                                            <span class="form-control-static"><a href="#qrcode" aria-controls="qrcode" role="tab" data-toggle="tab">扫二维码</a></span>&nbsp;
+                                                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                                                            <span class="form-control-static"><a href="#phone" aria-controls="phone" role="tab" data-toggle="tab">手机短信</a></span>
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="btn btn-primary btn-block">登陆</button>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                        <input type="checkbox">保持登陆
+                                                        </label>
+                                                    </div>
+                                                    <div class="text2">
+                                                         <a href="#">忘记密码?</a>
+                                                    </div>
+                                                </form>
+                                        </div>
+                                        <div class="bottom2 tab-pane" role="tabpanel" id="regist">
+                                                <form class="form-horizontal formbody">
+                                                    <div class="form-group">
+                                                        <label for="username2" class="col-sm-2 control-label">用户</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="username2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="password2" class="col-sm-2 control-label">密码</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="password" class="form-control" id="password2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label class="col-sm-2 control-label">性别</label>
+                                                        <div class="col-sm-10">
+                                                        <div class="radio radio-inline">
+                                                        
+                                                        <label>
+                                                            <input type="radio" name="sex" id="male" value="male" checked>
+                                                            男 
+                                                        </label>
+                                                        </div>
+                                                        <div class="radio radio-inline">
+                                                        <label>
+                                                            <input type="radio" name="sex" id="female" value="female">
+                                                            女
+                                                        </label>
+                                                        </div>
+                                                    </div>
+                                                     </div>
+                                                    <div class="form-group">
+                                                        <label for="phonenum" class="col-sm-2 control-label">手机</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="phonenum">
+                                                        </div>
+                                                    </div>
+                                                    <p class="text3">点击<a href="#">登陆</a>，即同意我们的<a href="#">用户协议</a>，并已阅读我们的<a href="#">用户隐私公告</a>。</p>
+                                                    <button type="submit" class="btn btn-info btn-block">注册</button>
+                                                </form>
+                                        </div>
+                                        <div class="bottom3 tab-pane" role="tabpanel" id="qrcode">
+                                            <img src="image/qrcode.png" alt="">
+                                            <div class="text4">
+                                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                                <a href="#login" aria-controls="login" role="tab" data-toggle="tab">密码</a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom4 tab-pane" role="tabpanel" id="phone">
+                                                <form class="formbody">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="phonenum2" placeholder="手机">
+                                                        </div>
+                                                        <div class="form-group  row">
+                                                            <div class="col-xs-8">
+                                                                    <input type="password" class="form-control" id="checknum" placeholder="验证码">
+                                                            </div>
+                                                            <div class="col-xs-4">
+                                                                    <button type="button" class="btn btn-default btn-block">发送</button>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        <button type="submit" class="btn btn-primary btn-block">登陆</button>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                            <input type="checkbox">保持登陆
+                                                            </label>
+                                                        </div>
+                                                        <div class="text2">
+                                                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                                            <a href="#login" aria-controls="login" role="tab" data-toggle="tab">密码</a>
+                                                        </div>
+                                                    </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                </div>
+            </div>
+           
+        </div>
+  </body>
+</html>

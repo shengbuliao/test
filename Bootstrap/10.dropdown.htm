@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $(".dropdown-menu>li>a").click(function() {
+          $("#content").text($(this).text());
+          $("input[type='hidden']").val($(this).attr("cid"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 300px;">
+          <div class="col-md-3 col-xs-6">
+            <form action="reg.php">
+              <div class="dropdown">
+                <button style="width: 100px;" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                  <span id="content">Java</span>
+                  <input type="hidden" name="course" value="1" />
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" cid="1">Java</a></li>
+                  <li><a href="#" cid="2">WEB</a></li>
+                  <li><a href="#" cid="3">Android</a></li>
+                </ul>
+              </div>
+              <input type="submit" value="Reg" class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="dropup">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="disabled"><a class="dropdown-header" href="#" style="cursor: auto;">Java</a></li>
+                <li><a href="#">OOP</a></li>
+                <li><a href="#">JDBC</a></li>
+                <li><a href="#">IO</a></li>
+                <li class="divider"></li>
+                <li class="disabled"><a class="dropdown-header" href="#" style="cursor: auto;">WEB</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li class="disabled"><a href="#">Vue</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6"></div>
+          <div class="col-md-3 col-xs-6"></div>
+      </div>
+    </div>
+  </body>
+</html>

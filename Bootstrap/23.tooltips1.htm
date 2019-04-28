@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        // 出于性能原因，所有的tooltip效果组件都必须要预先初始化结构！
+        $("#hello2,#hello3,#hello4").tooltip();
+
+        // 指定某个组件通过JS方式控制显示效果
+        $("#hello1").tooltip({
+          title: "<i>Welcome to tooltop!</i>",
+          placement: "right",
+          //animation: false,
+          // 当hover时，延迟0.5秒显示，移出时，延迟0.1秒消失
+          delay: { "show": 500, "hide": 100 },
+          html: true,
+          template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow" style="border-right-color: orange;"></div><div class="tooltip-inner" style="background: orange;"></div></div>',
+          trigger: "click",
+        });
+      });
+    </script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" style="margin-top: 100px;">
+      <div class="row">
+        <div class="col-xs-3">
+          <button id="hello1" class="btn btn-default" data-toggle="tooltip">Hello</button>
+        </div>
+        <div class="col-xs-3">
+          <button id="hello2" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Hello</button>
+        </div>
+        <div class="col-xs-3">
+          <button id="hello3" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Hello</button>
+        </div>
+        <div class="col-xs-3">
+          <button id="hello4" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Hello</button>
+        </div>
+      </div>
+  </body>
+</html>

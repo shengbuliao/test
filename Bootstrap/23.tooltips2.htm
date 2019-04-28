@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        var error_tip = $("#uname").tooltip({
+          title: "<b><i>Pls input 6 between 8 chars.</i></b>",
+          placement: "right",
+          html: true,
+          template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow" style="border-right-color: orange;"></div><div class="tooltip-inner" style="background: orange;"></div></div>',
+          trigger: "manual"
+        });
+
+        $("#uname").keyup(function() {
+          var input_value_length = $(this).val().length;
+          if ( input_value_length >=6 && input_value_length <= 10 )
+            error_tip.tooltip("hide");
+          else
+            error_tip.tooltip("show");
+        });
+
+        $("#uname").on('shown.bs.tooltip', function () {
+          setTimeout(function() {
+            error_tip.tooltip("hide");
+          }, 1000);
+        })
+      });
+    </script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" style="margin-top: 100px;">
+      <input id="uname" class="form-control" style="width: 200px;" data-toggle="tooltip" />
+    </div>
+  </body>
+</html>

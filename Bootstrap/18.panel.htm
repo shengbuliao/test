@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap3.3.4_zh/cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        var status = "open";
+        $(".panel-heading").click(function() {
+          if (status == "open") {
+            $(this).siblings().slideUp();
+            status = "close";
+          } else {
+            $(this).siblings().slideDown();
+            status = "open";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body style="padding: 100px;">
+    <div class="panel panel-primary" style="width: 400px;">
+      <div class="panel-heading">
+        Panel heading without title
+        <span class="pull-right">&times;</span>
+      </div>
+      <div class="panel-body">
+        Panel content
+        <br />
+        Panel content
+        <br />
+        Panel content
+        <br />
+        Panel content
+        <br />
+        <table class="table">
+          <tr><td>ID</td><td>Name</td><td>Address</td></tr>
+          <tr><td>1</td><td>Tom</td><td>Nanking</td></tr>
+          <tr><td>2</td><td>Sam</td><td>Tsingtau</td></tr>
+          <tr><td>3</td><td>Ben</td><td>Peking</td></tr>
+          <tr><td>4</td><td>Frank</td><td>Soochow</td></tr>
+        </table>
+      </div>
+      <div class="panel-footer" style="overflow: hidden;">
+        <div class="pull-right">2019-04-03</div>
+      </div>
+    </div>
+  </body>
+</html>
